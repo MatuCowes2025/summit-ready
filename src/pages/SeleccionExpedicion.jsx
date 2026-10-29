@@ -180,15 +180,6 @@ function SeleccionExpedicion({
                     </small>
                   </div>
                 )}
-
-                {desbloqueada &&
-                  !registro.cumbre &&
-                  registro.mejorPuntaje > 0 && (
-                    <div className="sr-cumbre-marca sr-intentada">
-                      MEJOR MARCA:{' '}
-                      {registro.mejorPuntaje} PTS
-                    </div>
-                  )}
               </div>
             )
           })}
