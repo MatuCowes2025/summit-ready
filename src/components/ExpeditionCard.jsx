@@ -1,3 +1,4 @@
+
 import GameButton from './GameButton'
 import { useNavigate } from 'react-router-dom'
 
@@ -11,14 +12,26 @@ function ExpeditionCard({
   objetos,
   elegir,
   tiempo,
-  destacada
+  destacada,
+  conquistada = false
 }) {
-
   const navigate = useNavigate()
 
   const seleccionarExpedicion = () => {
     if (nombre === 'Aconcagua') {
       navigate('/juego/aconcagua')
+    }
+
+    if (nombre === 'Kilimanjaro') {
+      navigate('/juego/kilimanjaro')
+    }
+
+    if (nombre === 'Everest') {
+      navigate('/juego/everest')
+    }
+
+    if (nombre === 'Mont Blanc') {
+      navigate('/juego/montblanc')
     }
   }
 
@@ -26,8 +39,47 @@ function ExpeditionCard({
     <div className={`expedition-card ${destacada ? 'destacada' : ''}`}>
 
       <div className="expedition-title">
-        <h3>{nombre}</h3>
-        <span className="expedition-altura">{altura}</span>
+        <h3
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '9px'
+          }}
+        >
+          {nombre}
+
+          {conquistada && (
+            <svg
+              width="21"
+              height="21"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Cumbre conquistada"
+              role="img"
+              style={{ flexShrink: 0 }}
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="#2E9D57"
+              />
+              <path
+                d="M7.5 12L10.5 15L16.5 9"
+                stroke="white"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+        </h3>
+
+        <span className="expedition-altura">
+          {altura}
+        </span>
       </div>
 
       <img
@@ -59,6 +111,7 @@ function ExpeditionCard({
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
+
               <line
                 x1="10"
                 y1="6"
@@ -124,7 +177,6 @@ function ExpeditionCard({
                   stroke="currentColor"
                   strokeWidth="1.8"
                   strokeLinecap="round"
-                  strokeLinejoin="round"
                 />
 
                 <path
@@ -204,13 +256,25 @@ function ExpeditionCard({
         <div className="expedition-divider"></div>
 
         <div className="expedition-game-data">
-          <span><strong>{objetos} OBJETOS</strong></span>
-          <span>Elegís {elegir}</span>
-          <span><strong>{tiempo} SEG</strong></span>
+          <span>
+            <strong>{objetos} OBJETOS</strong>
+          </span>
+
+          <span>
+            Elegís {elegir}
+          </span>
+
+          <span>
+            <strong>{tiempo} SEG</strong>
+          </span>
         </div>
 
         <GameButton
-          texto="SELECCIONAR"
+          texto={
+            conquistada
+              ? 'VOLVER A JUGAR'
+              : 'SELECCIONAR'
+          }
           onClick={seleccionarExpedicion}
         />
 
@@ -221,3 +285,4 @@ function ExpeditionCard({
 }
 
 export default ExpeditionCard
+

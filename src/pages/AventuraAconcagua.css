@@ -1,0 +1,793 @@
+
+
+.ascenso-principal {
+  display: grid;
+  grid-template-columns: 36% 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.ascenso-principal .personaje-zona {
+  display: flex;
+  flex-direction: column;
+}
+
+.ascenso-principal .personaje-contenedor {
+  height: 360px;
+}
+
+.barra-energia-contenedor {
+  margin-top: 20px;
+}
+
+.barra-energia-info {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.barra-energia {
+  height: 12px;
+  background: #071c33;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.barra-energia-nivel {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.aventura-inventario {
+  margin-top: 22px;
+}
+
+.aventura-inventario h3 {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.aventura-inventario .inventario-slots {
+  margin-top: 0;
+}
+
+/* PANEL DE LA HISTORIA */
+
+.evento-zona {
+  min-height: 510px;
+  padding: 35px;
+  border-radius: 14px;
+  background: #102b47;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.evento-numero {
+  color: #e6392f;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.evento-icono {
+  font-size: 58px;
+  margin: 22px 0 12px;
+}
+
+.evento-zona h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.evento-descripcion {
+  color: #cbd5df;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+.evento-opciones {
+  width: 100%;
+  margin-top: auto;
+}
+
+.evento-opciones h3 {
+  font-size: 16px;
+  color: white;
+  margin: 18px 0 14px;
+}
+
+.evento-opcion {
+  width: 100%;
+  min-height: 76px;
+  margin-bottom: 12px;
+  padding: 16px 18px;
+  border: 2px solid #29445f;
+  border-radius: 10px;
+  background: #071c33;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.evento-opcion:hover {
+  border-color: #e6392f;
+  background: #173653;
+  transform: translateY(-2px);
+}
+
+.aventura-letra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: #e6392f;
+  color: white;
+  font-size: 17px;
+}
+
+.aventura-flecha {
+  margin-left: auto;
+  font-size: 24px;
+  color: #e6392f;
+}
+
+.aventura-ayuda {
+  color: #91a3b5;
+  font-size: 12px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* CONSECUENCIA DE LA DECISIÓN */
+
+.evento-resultado {
+  width: 100%;
+  margin-top: auto;
+  padding: 25px;
+  border: 1px solid #29445f;
+  border-radius: 12px;
+  background: #071c33;
+}
+
+.aventura-subtitulo {
+  color: #e6392f;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.evento-resultado p {
+  margin-top: 15px;
+  color: white;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.aventura-impacto {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.aventura-impacto span {
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #173653;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.evento-resultado .confirmar-equipo {
+  width: 100%;
+  margin-top: 24px;
+  background: #e6392f;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESULTADO FINAL */
+
+.resultado-expedicion {
+  max-width: 850px;
+  margin: 45px auto;
+  padding: 45px;
+  border-radius: 16px;
+  background: #102b47;
+  color: white;
+  text-align: center;
+}
+
+.resultado-icono {
+  font-size: 70px;
+  margin: 20px 0;
+}
+
+.resultado-expedicion h1 {
+  color: white;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.resultado-expedicion > p {
+  color: #cbd5df;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.resultado-resumen {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.resultado-resumen > div {
+  padding: 18px 10px;
+  background: #071c33;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resultado-resumen span {
+  color: #91a3b5;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.resultado-resumen strong {
+  color: white;
+  font-size: 20px;
+}
+
+.resultado-expedicion .boton-reintentar {
+  padding: 15px 30px;
+}
+
+/* ADAPTACIÓN A PANTALLAS MÁS PEQUEÑAS */
+
+@media (max-width: 950px) {
+  .ascenso-principal,
+  .juego-principal {
+    grid-template-columns: 1fr;
+  }
+
+  .juego-superior {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .juego-datos {
+    flex-wrap: wrap;
+  }
+
+  .equipamiento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resultado-resumen {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .evento-zona {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .juego-aconcagua {
+    padding: 24px 16px;
+  }
+
+  .evento-zona,
+  .resultado-expedicion {
+    padding: 22px;
+  }
+
+  .evento-zona h2 {
+    font-size: 26px;
+  }
+
+  .resultado-expedicion h1 {
+    font-size: 29px;
+  }
+}
+
+.condition-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.condition-item svg {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   PREPARACIÓN ACONCAGUA
+   DISTRIBUCIÓN MONT BLANC / EVEREST
+========================================= */
+
+.juego-aconcagua.sr-ac-preparacion {
+  min-height: 100vh;
+  padding: 36px 22px 70px;
+  background: linear-gradient(180deg, #091b2c, #102b40);
+  color: white;
+}
+
+.sr-ac-preparacion * {
+  box-sizing: border-box;
+}
+
+.juego-aconcagua.sr-ac-preparacion
+.juego-aconcagua-contenido {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* ENCABEZADO SEPARADO */
+
+.sr-ac-preparacion .sr-ac-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 34px;
+  margin-bottom: 26px;
+  background: #081e34;
+}
+
+.sr-ac-preparacion .sr-ac-etiqueta {
+  display: block;
+  margin-bottom: 12px;
+  color: #ff766d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.sr-ac-preparacion .sr-ac-encabezado h1 {
+  margin: 0 0 12px;
+  color: white;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.sr-ac-preparacion .sr-ac-encabezado p {
+  margin: 0;
+  color: #b9c9da;
+}
+
+/* PANEL DE PREPARACIÓN */
+
+.sr-ac-preparacion .sr-ac-panel {
+  padding: 26px;
+  border: 1px solid #345064;
+  border-radius: 18px;
+  background: #102638;
+}
+
+.sr-ac-preparacion .sr-ac-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.sr-ac-preparacion .sr-ac-cabecera > div:first-child {
+  padding-left: 25px;
+  flex-shrink: 0;
+}
+
+.sr-ac-preparacion .sr-ac-cabecera h2 {
+  margin: 0;
+  color: white;
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+.sr-ac-preparacion .sr-ac-cabecera p {
+  margin: 0;
+  color: #c8d3e1;
+  line-height: 1.6;
+}
+
+/* CLIMA, EQUIPO Y CRONÓMETRO */
+
+.sr-ac-preparacion .sr-ac-contadores {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sr-ac-preparacion .sr-ac-contadores > strong {
+  padding: 15px;
+  background: #1a354b;
+  border: 1px solid #405a70;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.sr-ac-preparacion .sr-ac-contadores > .sr-ac-alerta {
+  color: #ff766d;
+  border-color: #e6392f;
+}
+
+.sr-ac-preparacion .sr-ac-contadores .condition-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.sr-ac-preparacion .sr-ac-contadores .condition-item svg {
+  flex-shrink: 0;
+}
+
+/* DISTRIBUCIÓN DE LAS DOS COLUMNAS */
+
+.sr-ac-preparacion .sr-ac-columnas {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.65fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.sr-ac-preparacion .sr-ac-personaje,
+.sr-ac-preparacion .sr-ac-equipo {
+  min-width: 0;
+}
+
+.sr-ac-preparacion .sr-ac-personaje h3,
+.sr-ac-preparacion .sr-ac-equipo h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  color: white;
+}
+
+/* PERSONAJE */
+
+.sr-ac-preparacion
+.sr-ac-personaje .personaje-contenedor {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.sr-ac-preparacion
+.sr-ac-personaje .personaje-imagen {
+  display: block;
+  max-width: 100%;
+  height: 95%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+/* CASILLEROS DE EQUIPAMIENTO */
+
+.sr-ac-preparacion .sr-ac-slots {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.sr-ac-preparacion .sr-ac-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px dashed #668198;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: white;
+  font-size: 22px;
+}
+
+.sr-ac-preparacion .sr-ac-slot img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+/* CONDICIONES DE LA EXPEDICIÓN */
+
+.sr-ac-preparacion .sr-ac-condiciones {
+  padding: 16px;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+}
+
+.sr-ac-preparacion .sr-ac-condiciones strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff766d;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.sr-ac-preparacion .sr-ac-condiciones p {
+  margin: 0;
+  color: #c8d3e1;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* EQUIPAMIENTO Y BOTONES EN UNA MISMA GRILLA */
+
+.sr-ac-preparacion .sr-ac-items {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.sr-ac-preparacion
+.sr-ac-items > .equipamiento-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+  min-height: 155px;
+  height: auto;
+  margin: 0;
+  padding: 14px 8px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: white;
+  color: #071b30;
+  cursor: pointer;
+}
+
+.sr-ac-preparacion
+.sr-ac-items > .equipamiento-card:hover:not(:disabled),
+.sr-ac-preparacion
+.sr-ac-items > .equipamiento-card.seleccionada {
+  border-color: #e6392f;
+}
+
+.sr-ac-preparacion
+.sr-ac-items > .equipamiento-card.seleccionada {
+  background: #fff5f4;
+}
+
+.sr-ac-preparacion
+.sr-ac-items > .equipamiento-card img {
+  display: block;
+  width: 100%;
+  height: 105px;
+  object-fit: contain;
+}
+
+.sr-ac-preparacion
+.sr-ac-items > .equipamiento-card span {
+  color: #071b30;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* BOTONES EN LA ÚLTIMA FILA, A LA DERECHA */
+
+.sr-ac-preparacion .sr-ac-acciones {
+  grid-column: 4 / 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 8px;
+}
+
+/* ESTILO DE BOTONES */
+
+.sr-ac-preparacion .sr-ac-boton-principal,
+.sr-ac-preparacion .sr-ac-boton-secundario {
+  padding: 15px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.sr-ac-preparacion .sr-ac-boton-principal {
+  background: #e6392f;
+  border: 1px solid #e6392f;
+  color: white;
+}
+
+.sr-ac-preparacion
+.sr-ac-boton-principal:hover:not(:disabled) {
+  background: #c52d25;
+}
+
+.sr-ac-preparacion
+.sr-ac-boton-principal:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.sr-ac-preparacion .sr-ac-boton-secundario {
+  background: transparent;
+  border: 1px solid #71879d;
+  color: white;
+}
+
+.sr-ac-preparacion
+.sr-ac-boton-secundario:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sr-ac-preparacion .sr-ac-acciones button {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .sr-ac-preparacion .sr-ac-cabecera {
+    flex-direction: column;
+  }
+
+  .sr-ac-preparacion .sr-ac-columnas {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .sr-ac-preparacion .sr-ac-encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sr-ac-preparacion .sr-ac-items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sr-ac-preparacion .sr-ac-acciones {
+    grid-column: 2 / 4;
+  }
+}
+
+@media (max-width: 600px) {
+  .juego-aconcagua.sr-ac-preparacion {
+    padding: 20px 12px 50px;
+  }
+
+  .sr-ac-preparacion .sr-ac-encabezado,
+  .sr-ac-preparacion .sr-ac-panel {
+    padding: 16px;
+  }
+
+  .sr-ac-preparacion .sr-ac-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sr-ac-preparacion .sr-ac-acciones {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .sr-ac-preparacion .sr-ac-cabecera h2 {
+    font-size: clamp(23px, 6vw, 30px);
+  }
+
+  .sr-ac-preparacion .sr-ac-contadores > strong {
+    padding: 11px;
+    font-size: 12px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .sr-ac-preparacion .sr-ac-contadores .condition-item {
+    font-size: 12px;
+  }
+}
+
+/* ÚNICO AGREGADO: CABECERA CON REGRESO DURANTE EL ASCENSO */
+
+.juego-aconcagua.sr-ac-ascenso .sr-ac-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 34px;
+  margin-bottom: 26px;
+  background: #081e34;
+}
+
+.juego-aconcagua.sr-ac-ascenso .sr-ac-etiqueta {
+  display: block;
+  margin-bottom: 12px;
+  color: #ff766d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.juego-aconcagua.sr-ac-ascenso .sr-ac-encabezado h1 {
+  margin: 0 0 12px;
+  color: white;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.juego-aconcagua.sr-ac-ascenso .sr-ac-encabezado p {
+  margin: 0;
+  color: #b9c9da;
+}
+
+.juego-aconcagua.sr-ac-ascenso .sr-ac-boton-secundario {
+  flex-shrink: 0;
+  padding: 15px 22px;
+  border: 1px solid #71879d;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.juego-aconcagua.sr-ac-ascenso .sr-ac-boton-secundario:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 700px) {
+  .juego-aconcagua.sr-ac-ascenso .sr-ac-encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .juego-aconcagua.sr-ac-ascenso .sr-ac-encabezado {
+    padding: 16px;
+  }
+}
+

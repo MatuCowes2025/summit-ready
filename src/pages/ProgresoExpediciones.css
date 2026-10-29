@@ -1,0 +1,592 @@
+
+
+
+/* =========================================
+   SUMMIT READY - PROGRESIÓN Y RESULTADOS
+========================================= */
+
+/* PROGRESO GENERAL */
+
+.sr-progreso-general {
+  max-width: 480px;
+  margin: 25px auto 35px;
+  padding: 20px;
+  background: #102b47;
+  border-radius: 12px;
+  color: white;
+}
+
+.sr-progreso-general > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.sr-progreso-general span {
+  font-size: 11px;
+  color: #91a3b5;
+  font-weight: bold;
+}
+
+.sr-progreso-general strong {
+  font-size: 14px;
+  color: white;
+}
+
+.sr-progreso-barra {
+  width: 100%;
+  height: 9px;
+  margin-top: 15px;
+  background: #071c33;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.sr-progreso-barra div {
+  height: 100%;
+  background: #e6392f;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+/* =========================================
+   TARJETAS DE EXPEDICIONES
+========================================= */
+
+.sr-expedicion-item {
+  position: relative;
+  min-width: 0;
+}
+
+.sr-expedicion-bloqueada {
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* La tarjeta queda oscurecida, pero
+   la fotografía sigue siendo reconocible. */
+
+.sr-expedicion-bloqueada > :first-child {
+  filter: grayscale(0.25) brightness(0.75);
+}
+
+/* Capa de bloqueo */
+
+.sr-bloqueo {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(5, 20, 36, 0.48);
+  color: white;
+  text-align: center;
+  cursor: not-allowed;
+
+  isolation: isolate;
+}
+
+/* Panel oscuro central:
+   evita que las letras se mezclen con
+   la imagen y con los datos de la tarjeta. */
+
+.sr-bloqueo::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: calc(100% - 36px);
+  max-width: 340px;
+  height: 225px;
+
+  background: rgba(7, 28, 51, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sr-bloqueo-icono {
+  display: inline-block;
+
+  padding: 8px 12px;
+  margin-bottom: 16px;
+
+  border: 1px solid #b2c2d1;
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.sr-bloqueo strong {
+  display: block;
+  max-width: 280px;
+
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 12px;
+
+  color: white;
+  text-shadow: none;
+}
+
+.sr-bloqueo p {
+  max-width: 270px;
+
+  color: #dce6ef;
+  font-size: 13px;
+  line-height: 1.5;
+
+  margin: 0 0 12px;
+  text-shadow: none;
+}
+
+.sr-bloqueo small {
+  display: block;
+
+  color: #ff9b94;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.5;
+
+  text-shadow: none;
+}
+
+/* Marca de cumbre conquistada */
+
+.sr-cumbre-marca {
+  position: absolute;
+  z-index: 3;
+
+  top: 12px;
+  right: 12px;
+
+  padding: 8px 10px;
+  border-radius: 6px;
+
+  background: #1d8050;
+  color: white;
+
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+
+  pointer-events: none;
+}
+
+.sr-cumbre-marca.sr-intentada {
+  background: #102b47;
+}
+
+/* =========================================
+   ASCENSO - MENOS ESPACIO VACÍO
+========================================= */
+
+.ascenso-principal {
+  align-items: start;
+}
+
+.ascenso-principal .evento-zona {
+  min-height: 0;
+  padding: 30px;
+}
+
+.ascenso-principal .evento-zona h2 {
+  margin-top: 12px;
+  margin-bottom: 14px;
+}
+
+.ascenso-principal .evento-descripcion {
+  margin-bottom: 0;
+}
+
+.ascenso-principal .evento-opciones {
+  margin-top: 30px;
+}
+
+.ascenso-principal .evento-opciones h3 {
+  margin-top: 0;
+}
+
+.ascenso-principal .evento-resultado {
+  margin-top: 30px;
+}
+
+/* =========================================
+   KILIMANJARO - PREPARACIÓN MÁS COMPACTA
+========================================= */
+
+/* Evita que el panel del personaje se estire
+   para igualar la altura del equipamiento. */
+
+.juego-kilimanjaro .juego-principal {
+  align-items: start;
+}
+
+.juego-kilimanjaro .juego-principal > .personaje-zona {
+  align-self: start;
+  height: auto;
+  min-height: 0;
+}
+
+/* Reduce la altura de la imagen en preparación. */
+
+.juego-kilimanjaro .juego-principal .personaje-contenedor {
+  height: 340px;
+  max-height: 340px;
+  min-height: 0;
+}
+
+/* =========================================
+   RESULTADO FINAL - FONDO OSCURO
+========================================= */
+
+.resultado-expedicion.sr-resultado {
+  max-width: 950px;
+  margin: 20px auto;
+  padding: 28px 35px;
+
+  background: #102b47;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+
+  color: white;
+}
+
+/* Refuerzo específico para Kilimanjaro:
+   evita el fondo celeste de la captura. */
+
+.juego-kilimanjaro .resultado-expedicion.sr-resultado {
+  background: #102b47;
+  color: white;
+}
+
+.sr-resultado .juego-etiqueta {
+  color: #ff5148;
+}
+
+.sr-resultado-simbolo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+  margin: 14px auto;
+
+  border: 2px solid #e6392f;
+  border-radius: 50%;
+
+  color: white;
+}
+
+.sr-resultado-simbolo svg {
+  display: block;
+}
+
+.sr-resultado h1 {
+  margin-bottom: 8px;
+  font-size: 34px;
+  color: white;
+}
+
+.sr-resultado > p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #cbd5df;
+}
+
+/* =========================================
+   ESTADÍSTICAS DEL RESULTADO
+========================================= */
+
+.sr-resultado .resultado-resumen {
+  margin: 22px 0;
+  gap: 12px;
+}
+
+.sr-resultado .resultado-resumen > div {
+  padding: 14px 10px;
+  gap: 7px;
+
+  background: #071c33;
+  border-radius: 10px;
+}
+
+.sr-resultado .resultado-resumen span {
+  color: #91a3b5;
+}
+
+.sr-resultado .resultado-resumen strong {
+  font-size: 19px;
+  color: white;
+}
+
+/* =========================================
+   PERFIL Y MEDALLA
+========================================= */
+
+.sr-reconocimientos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.sr-perfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: #071c33;
+  border: 1px solid #29445f;
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.sr-perfil > span,
+.sr-medalla-panel > span {
+  display: block;
+
+  color: #91a3b5;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+}
+
+.sr-perfil h2 {
+  margin: 10px 0;
+  color: white;
+  font-size: 23px;
+}
+
+.sr-perfil p {
+  max-width: 560px;
+  margin: 0 auto;
+
+  color: #cbd5df;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.sr-medalla-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 12px;
+
+  background: #071c33;
+  border: 1px solid #29445f;
+  border-radius: 12px;
+}
+
+.sr-medalla-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+  margin: 12px 0;
+
+  border: 2px solid currentColor;
+  border-radius: 50%;
+
+  font-size: 28px;
+}
+
+.sr-medalla-oro {
+  color: #f1c75b;
+}
+
+.sr-medalla-plata {
+  color: #cbd5df;
+}
+
+.sr-medalla-bronce {
+  color: #d79b66;
+}
+
+.sr-medalla-panel strong {
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+}
+
+/* =========================================
+   DESBLOQUEO DE SIGUIENTE EXPEDICIÓN
+========================================= */
+
+.sr-desbloqueo {
+  margin-top: 14px;
+  padding: 14px;
+
+  border: 1px solid #29445f;
+  border-radius: 10px;
+
+  background: #173653;
+}
+
+.sr-desbloqueo-logrado {
+  border-color: #347b5c;
+  background: #153d38;
+}
+
+.sr-desbloqueo strong {
+  display: block;
+
+  color: white;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.sr-desbloqueo p {
+  color: #cbd5df;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* =========================================
+   BOTONES DEL RESULTADO
+========================================= */
+
+.sr-botones-resultado {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.sr-boton-continuar {
+  width: 100%;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #e6392f;
+  color: white;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sr-boton-continuar:hover {
+  background: #c52d25;
+}
+
+.sr-botones-secundarios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.sr-botones-secundarios button {
+  padding: 13px;
+
+  border: 1px solid #68829a;
+  border-radius: 8px;
+
+  background: transparent;
+  color: white;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sr-botones-secundarios button:hover {
+  background: #173653;
+}
+
+/* =========================================
+   PANTALLAS PEQUEÑAS
+========================================= */
+
+@media (max-width: 950px) {
+  .sr-reconocimientos {
+    grid-template-columns: 1fr;
+  }
+
+  .sr-medalla-panel {
+    padding: 15px;
+  }
+
+  .ascenso-principal .evento-zona {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .resultado-expedicion.sr-resultado {
+    padding: 24px 16px;
+  }
+
+  .sr-resultado h1 {
+    font-size: 28px;
+  }
+
+  .sr-perfil {
+    padding: 20px 15px;
+  }
+
+  .sr-perfil h2 {
+    font-size: 21px;
+  }
+
+  .sr-botones-secundarios {
+    grid-template-columns: 1fr;
+  }
+
+  .sr-progreso-general > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ascenso-principal .evento-zona {
+    padding: 22px;
+  }
+
+  .sr-bloqueo {
+    padding: 14px;
+  }
+
+  .sr-bloqueo::before {
+    width: calc(100% - 20px);
+  }
+
+  .sr-bloqueo strong {
+    font-size: 16px;
+  }
+}
+
+
+.sr-medalla-sin.medalla {
+  color: #8b9cac;
+}

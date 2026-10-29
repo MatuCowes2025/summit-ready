@@ -1,0 +1,1263 @@
+
+.juego-kilimanjaro {
+  min-height: 100vh;
+  color: white;
+}
+
+.juego-kilimanjaro .inventario-slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.juego-kilimanjaro .inventario-slot {
+  width: 62px;
+  height: 62px;
+}
+
+.kilimanjaro-consejo {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.kilimanjaro-consejo strong {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #ff766d;
+  margin-bottom: 8px;
+}
+
+.kilimanjaro-consejo p,
+.kilimanjaro-aviso {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #c8d3e1;
+  margin: 0;
+}
+
+.kilimanjaro-aviso {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.juego-kilimanjaro .condition-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.juego-kilimanjaro .condition-item svg {
+  flex-shrink: 0;
+}
+
+/* FASE 2 — ASCENSO */
+
+.kilimanjaro-aventura {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.45fr);
+  gap: 28px;
+  margin-top: 28px;
+  align-items: stretch;
+}
+
+.kilimanjaro-escenario,
+.kilimanjaro-evento {
+  background: #102b47;
+  border-radius: 15px;
+  padding: 22px;
+  min-width: 0;
+}
+
+.kilimanjaro-escenario {
+  display: flex;
+  flex-direction: column;
+}
+
+.kilimanjaro-escenario .kilimanjaro-personaje-titulo {
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  margin: 0 0 15px;
+}
+
+.kilimanjaro-personaje {
+  height: 340px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  background-color: #173852;
+}
+
+.kilimanjaro-personaje img {
+  max-width: 100%;
+  height: 95%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.kilimanjaro-estado {
+  margin-top: 22px;
+}
+
+.kilimanjaro-estado-titulo {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.kilimanjaro-barra {
+  height: 12px;
+  background: #071c33;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.kilimanjaro-barra-relleno {
+  height: 100%;
+  background: #2e9d57;
+  border-radius: inherit;
+  transition: width 0.35s ease;
+}
+
+.kilimanjaro-barra-relleno.peligro {
+  background: #e6392f;
+}
+
+.kilimanjaro-escenario .kilimanjaro-inventario-titulo {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  margin: 25px 0 15px;
+}
+
+.kilimanjaro-inventario {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.kilimanjaro-item {
+  width: 65px;
+  height: 65px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.kilimanjaro-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* PANEL DE LOS CAPÍTULOS */
+
+.kilimanjaro-evento {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.kilimanjaro-progreso {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff5148;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 12px 0 18px;
+}
+
+.kilimanjaro-evento h2 {
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.2;
+  margin: 0 0 15px;
+  color: white;
+}
+
+.kilimanjaro-descripcion {
+  color: #d2dce7;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 26px;
+}
+
+.kilimanjaro-decision-zona {
+  margin-top: 0;
+}
+
+.kilimanjaro-decision-zona h3 {
+  font-size: 16px;
+  color: white;
+  margin: 0 0 15px;
+}
+
+.kilimanjaro-opciones {
+  display: grid;
+  gap: 12px;
+}
+
+.kilimanjaro-opcion {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  background: #071c33;
+  border: 2px solid #29445f;
+  border-radius: 10px;
+  padding: 15px 18px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.kilimanjaro-opcion:hover {
+  border-color: #e6392f;
+  background: #173653;
+  transform: translateY(-2px);
+}
+
+.kilimanjaro-opcion-letra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: #e6392f;
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.kilimanjaro-opcion-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.kilimanjaro-opcion-texto strong {
+  color: white;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.kilimanjaro-opcion-texto small {
+  color: #aebfd0;
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.kilimanjaro-opcion-flecha {
+  flex-shrink: 0;
+  color: #e6392f;
+  font-size: 25px;
+}
+
+.kilimanjaro-ayuda {
+  color: #91a3b5;
+  font-size: 12px;
+  margin: 13px 0 0;
+  line-height: 1.5;
+}
+
+.kilimanjaro-consecuencia {
+  background: #071c33;
+  border: 1px solid #29445f;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 5px;
+}
+
+.kilimanjaro-consecuencia-label {
+  display: block;
+  color: #ff5148;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+.kilimanjaro-consecuencia p {
+  color: white;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.kilimanjaro-recompensas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.kilimanjaro-recompensas strong {
+  background: #173653;
+  border-radius: 7px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: white;
+}
+
+.kilimanjaro-recompensas .energia-positiva {
+  color: #64dfa0;
+}
+
+.kilimanjaro-recompensas .energia-negativa {
+  color: #ff847b;
+}
+
+.kilimanjaro-alerta {
+  color: #ff847b !important;
+  font-weight: 700;
+}
+
+.kilimanjaro-consecuencia .confirmar-equipo {
+  width: 100%;
+  margin-top: 8px;
+  background: #e6392f;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESULTADO FINAL */
+
+.kilimanjaro-final {
+  max-width: 1010px;
+  margin: 52px auto;
+  padding: 38px;
+  background: #102b47;
+  border-radius: 18px;
+  color: white;
+  text-align: center;
+}
+
+.kilimanjaro-final-etiqueta {
+  display: block;
+  color: #ff766d;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.kilimanjaro-final-montana {
+  width: 70px;
+  height: 70px;
+  margin: 27px auto;
+  border: 2px solid #e6392f;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kilimanjaro-final h1 {
+  color: white;
+  font-size: clamp(29px, 4vw, 40px);
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.kilimanjaro-final-descripcion {
+  color: #cbd5df;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 740px;
+}
+
+.kilimanjaro-final-estadisticas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 30px 0 22px;
+}
+
+.kilimanjaro-final-estadisticas > div {
+  min-height: 95px;
+  padding: 18px 12px;
+  border-radius: 12px;
+  background: #071c33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.kilimanjaro-final-estadisticas span {
+  color: #91a3b5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.kilimanjaro-final-estadisticas strong {
+  color: white;
+  font-size: 21px;
+}
+
+.kilimanjaro-final-reconocimientos {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(190px, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.kilimanjaro-final-perfil,
+.kilimanjaro-final-medalla {
+  background: #071c33;
+  border: 1px solid #29445f;
+  border-radius: 12px;
+  padding: 27px 22px;
+}
+
+.kilimanjaro-final-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kilimanjaro-final-perfil > span,
+.kilimanjaro-final-medalla > span {
+  color: #91a3b5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.kilimanjaro-final-perfil h2 {
+  color: white;
+  font-size: 24px;
+  margin: 18px 0 10px;
+}
+
+.kilimanjaro-final-perfil p {
+  color: #cbd5df;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 580px;
+}
+
+.kilimanjaro-final-medalla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.kilimanjaro-medalla-icono {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 28px;
+}
+
+.kilimanjaro-medalla-icono.oro {
+  color: #f3c34e;
+}
+
+.kilimanjaro-medalla-icono.plata {
+  color: #c7d3df;
+}
+
+.kilimanjaro-medalla-icono.bronce {
+  color: #c58b62;
+}
+
+.kilimanjaro-medalla-icono.sin-medalla {
+  color: #91a3b5;
+}
+
+.kilimanjaro-final-medalla strong {
+  color: white;
+  font-size: 13px;
+}
+
+.kilimanjaro-final-desbloqueo,
+.kilimanjaro-final-pendiente {
+  padding: 18px 22px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.kilimanjaro-final-desbloqueo {
+  background: #153f37;
+  border: 1px solid #2e8059;
+}
+
+.kilimanjaro-final-pendiente {
+  background: #142f4c;
+  border: 1px solid #38536b;
+}
+
+.kilimanjaro-final-desbloqueo strong,
+.kilimanjaro-final-pendiente strong {
+  display: block;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.kilimanjaro-final-desbloqueo p,
+.kilimanjaro-final-pendiente p {
+  color: #cbd5df;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.kilimanjaro-final-continuar {
+  width: 100%;
+  padding: 16px 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #e6392f;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.2s ease;
+}
+
+.kilimanjaro-final-continuar:hover {
+  background: #f04a40;
+}
+
+.kilimanjaro-final-botones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.kilimanjaro-final-botones button {
+  padding: 14px 18px;
+  border: 1px solid #59718b;
+  border-radius: 9px;
+  background: transparent;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.kilimanjaro-final-botones button:hover {
+  background: #173653;
+}
+
+main.juego-kilimanjaro:has(.kilimanjaro-final) {
+  min-height: 100vh;
+  background: #071c33;
+  padding: 20px 20px 30px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final {
+  padding: 24px 35px;
+  margin: 0 auto;
+  background: #102b47;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final h1 {
+  color: #fff;
+  font-size: 30px;
+  margin: 12px 0 6px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-descripcion {
+  color: #cbd5df;
+  margin: 0;
+  font-size: 14px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-montana {
+  width: 54px;
+  height: 54px;
+  margin: 12px auto;
+  color: #fff;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-montana svg {
+  width: 32px;
+  height: 32px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-perfil h2,
+.juego-kilimanjaro .kilimanjaro-final-medalla strong {
+  color: #fff;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-perfil p {
+  color: #cbd5df;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-botones button {
+  color: #fff;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-estadisticas {
+  margin: 22px 0 14px;
+  gap: 10px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-estadisticas > div {
+  padding: 14px 10px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-reconocimientos {
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-perfil,
+.juego-kilimanjaro .kilimanjaro-final-medalla {
+  padding: 15px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-perfil h2 {
+  margin: 8px 0;
+  font-size: 21px;
+}
+
+.juego-kilimanjaro .kilimanjaro-medalla-icono {
+  margin: 8px auto;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-desbloqueo,
+.juego-kilimanjaro .kilimanjaro-final-pendiente {
+  padding: 12px;
+  margin: 10px 0;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-continuar {
+  padding: 13px;
+  margin: 8px 0;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-botones {
+  margin-top: 8px;
+  gap: 10px;
+}
+
+.juego-kilimanjaro .kilimanjaro-final-botones button {
+  padding: 12px;
+}
+
+/* BOTONES DE PREPARACIÓN */
+
+.juego-kilimanjaro .equipamiento-grid > .kilimanjaro-acciones-grilla {
+  grid-column: 3 / -1;
+  order: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.juego-kilimanjaro .kilimanjaro-acciones-grilla .kilimanjaro-boton-grilla {
+  width: 100%;
+  height: 64px;
+  min-height: 0;
+  margin: 0;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.juego-kilimanjaro .kilimanjaro-boton-reiniciar {
+  width: 100%;
+  height: 64px;
+  margin: 0;
+  padding: 14px 20px;
+  border: 1px solid #71869b;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.juego-kilimanjaro .kilimanjaro-boton-reiniciar:hover {
+  background: #173653;
+  border-color: white;
+}
+
+/* FASE 1 — PREPARACIÓN */
+
+main.juego-kilimanjaro.kilimanjaro-vista-preparacion {
+  min-height: 100vh;
+  padding: 36px 22px 70px;
+  background: linear-gradient(180deg, #091b2c, #102b40);
+  color: #fff;
+}
+
+.kilimanjaro-vista-preparacion,
+.kilimanjaro-vista-preparacion * {
+  box-sizing: border-box;
+}
+
+/* ENCABEZADO DE MONTAÑA */
+
+.kilimanjaro-vista-preparacion .kilimanjaro-portada {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto 26px;
+  padding: 30px 34px;
+  background: #081e34;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-portada-etiqueta {
+  display: block;
+  margin-bottom: 12px;
+  color: #ff766d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-portada h1 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 800;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-portada p {
+  margin: 0;
+  color: #b9c9da;
+  font-size: 17px;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-volver-expediciones {
+  flex-shrink: 0;
+  padding: 15px 22px;
+  border: 1px solid #71879d;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-volver-expediciones:hover {
+  background: #173653;
+}
+
+/* PANEL DE PREPARACIÓN */
+
+.kilimanjaro-vista-preparacion .juego-aconcagua-contenido {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 28px;
+  border: 1px solid #345064;
+  border-radius: 18px;
+  background: #102638;
+}
+
+/* TÍTULO A LA IZQUIERDA, INDICADORES A LA DERECHA */
+
+.kilimanjaro-vista-preparacion .juego-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.kilimanjaro-vista-preparacion .juego-superior > div:first-child {
+  padding-left: 25px;
+  flex-shrink: 0;
+}
+
+.kilimanjaro-vista-preparacion .juego-superior .juego-etiqueta {
+  display: none;
+}
+
+.kilimanjaro-vista-preparacion .juego-superior h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.kilimanjaro-vista-preparacion .juego-datos {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.kilimanjaro-vista-preparacion .juego-datos .condition-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.kilimanjaro-vista-preparacion .juego-datos > strong,
+.kilimanjaro-vista-preparacion .juego-datos > .cronometro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  margin: 0;
+  padding: 12px 15px;
+  border: 1px solid #405a70;
+  border-radius: 10px;
+  background: #1a354b;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.kilimanjaro-vista-preparacion .juego-datos > .cronometro-urgente {
+  border-color: #e6392f;
+  color: #ff766d;
+}
+
+/* DOS COLUMNAS */
+
+.kilimanjaro-vista-preparacion .juego-principal {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.65fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.kilimanjaro-vista-preparacion .personaje-zona,
+.kilimanjaro-vista-preparacion .equipamiento-zona {
+  min-width: 0;
+}
+
+.kilimanjaro-vista-preparacion .personaje-zona > h2,
+.kilimanjaro-vista-preparacion .equipamiento-zona > h2 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+/* PERSONAJE Y CASILLEROS */
+
+.kilimanjaro-vista-preparacion .personaje-zona .personaje-contenedor {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.kilimanjaro-vista-preparacion .personaje-zona .personaje-imagen {
+  display: block;
+  max-width: 100%;
+  height: 95%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.kilimanjaro-vista-preparacion .personaje-zona .inventario-slots {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.kilimanjaro-vista-preparacion .personaje-zona .inventario-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  aspect-ratio: 1;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px dashed #668198;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: 22px;
+}
+
+.kilimanjaro-vista-preparacion .personaje-zona .inventario-slot img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+/* EQUIPAMIENTO */
+
+.kilimanjaro-vista-preparacion .kilimanjaro-consejo {
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.kilimanjaro-vista-preparacion .equipamiento-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.kilimanjaro-vista-preparacion .equipamiento-grid > .equipamiento-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+  min-height: 155px;
+  height: auto;
+  margin: 0;
+  padding: 14px 6px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: #fff;
+  color: #071b30;
+  cursor: pointer;
+}
+
+.kilimanjaro-vista-preparacion .equipamiento-grid > .equipamiento-card:hover:not(:disabled),
+.kilimanjaro-vista-preparacion .equipamiento-grid > .equipamiento-card.seleccionada {
+  border-color: #e6392f;
+}
+
+.kilimanjaro-vista-preparacion .equipamiento-grid > .equipamiento-card.seleccionada {
+  background: #fff5f4;
+}
+
+.kilimanjaro-vista-preparacion .equipamiento-grid > .equipamiento-card img {
+  display: block;
+  width: 100%;
+  height: 105px;
+  object-fit: contain;
+}
+
+.kilimanjaro-vista-preparacion .equipamiento-grid > .equipamiento-card span {
+  color: #071b30;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.kilimanjaro-vista-preparacion .equipamiento-grid > .equipamiento-card:disabled {
+  cursor: not-allowed;
+}
+
+/* BOTONES EN LA GRILLA */
+
+.kilimanjaro-vista-preparacion .equipamiento-grid > .kilimanjaro-acciones-grilla {
+  grid-column: 5 / 7;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 8px;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-acciones-grilla .kilimanjaro-boton-grilla,
+.kilimanjaro-vista-preparacion .kilimanjaro-acciones-grilla .kilimanjaro-boton-reiniciar {
+  width: 100%;
+  height: auto;
+  min-height: 52px;
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-acciones-grilla .kilimanjaro-boton-grilla {
+  border: 1px solid #e6392f;
+  background: #e6392f;
+  color: #fff;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-acciones-grilla .kilimanjaro-boton-grilla:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-acciones-grilla .kilimanjaro-boton-reiniciar {
+  border: 1px solid #71879d;
+  background: transparent;
+  color: #fff;
+}
+
+.kilimanjaro-vista-preparacion .kilimanjaro-acciones-grilla .kilimanjaro-boton-reiniciar:hover {
+  background: #173653;
+}
+
+/* RESPONSIVE DE PREPARACIÓN */
+
+@media (max-width: 1150px) {
+  .kilimanjaro-vista-preparacion .equipamiento-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .kilimanjaro-vista-preparacion .equipamiento-grid > .kilimanjaro-acciones-grilla {
+    grid-column: 4 / 6;
+  }
+}
+
+@media (max-width: 1050px) {
+  .kilimanjaro-vista-preparacion .juego-superior {
+    flex-direction: column;
+  }
+
+  .kilimanjaro-vista-preparacion .juego-datos {
+    justify-content: flex-end;
+  }
+
+  .kilimanjaro-vista-preparacion .juego-principal {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .kilimanjaro-vista-preparacion .kilimanjaro-portada {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .kilimanjaro-vista-preparacion .equipamiento-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .kilimanjaro-vista-preparacion .equipamiento-grid > .kilimanjaro-acciones-grilla {
+    grid-column: 2 / 4;
+  }
+}
+
+@media (max-width: 650px) {
+  main.juego-kilimanjaro.kilimanjaro-vista-preparacion {
+    padding: 20px 12px 40px;
+  }
+
+  .kilimanjaro-vista-preparacion .kilimanjaro-portada {
+    padding: 20px 16px;
+  }
+
+  .kilimanjaro-vista-preparacion .juego-aconcagua-contenido {
+    padding: 18px 14px;
+  }
+
+  .kilimanjaro-vista-preparacion .juego-superior h1 {
+    font-size: clamp(23px, 6vw, 30px);
+  }
+
+  .kilimanjaro-vista-preparacion .juego-datos > strong,
+  .kilimanjaro-vista-preparacion .juego-datos > .cronometro {
+    padding: 11px;
+    font-size: 12px;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .kilimanjaro-vista-preparacion .equipamiento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kilimanjaro-vista-preparacion .equipamiento-grid > .kilimanjaro-acciones-grilla {
+    grid-column: 1 / -1;
+  }
+}
+
+/* RESPONSIVE ORIGINAL DE ASCENSO Y RESULTADO */
+
+@media (max-width: 950px) {
+  .kilimanjaro-aventura {
+    grid-template-columns: 1fr;
+  }
+
+  .kilimanjaro-escenario {
+    max-width: none;
+  }
+
+  .kilimanjaro-personaje {
+    height: 290px;
+  }
+
+  .kilimanjaro-final {
+    margin: 30px 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .kilimanjaro-final {
+    padding: 24px 18px;
+  }
+
+  .kilimanjaro-final-estadisticas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kilimanjaro-final-reconocimientos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .juego-kilimanjaro .kilimanjaro-final {
+    padding: 20px 16px;
+  }
+
+  .juego-kilimanjaro .kilimanjaro-final h1 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kilimanjaro-escenario,
+  .kilimanjaro-evento {
+    padding: 17px;
+  }
+
+  .kilimanjaro-personaje {
+    height: 250px;
+  }
+
+  .kilimanjaro-item {
+    width: 54px;
+    height: 54px;
+  }
+
+  .kilimanjaro-opcion {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .kilimanjaro-final-botones {
+    grid-template-columns: 1fr;
+  }
+
+  .kilimanjaro-final-estadisticas strong {
+    font-size: 18px;
+  }
+}
+
+/* ÚNICO AGREGADO: PORTADA Y BOTÓN DURANTE EL ASCENSO */
+
+.juego-kilimanjaro.kilimanjaro-vista-ascenso .kilimanjaro-portada {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto 26px;
+  padding: 30px 34px;
+  background: #081e34;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.juego-kilimanjaro.kilimanjaro-vista-ascenso .kilimanjaro-portada-etiqueta {
+  display: block;
+  margin-bottom: 12px;
+  color: #ff766d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.juego-kilimanjaro.kilimanjaro-vista-ascenso .kilimanjaro-portada h1 {
+  margin: 0 0 8px;
+  color: white;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 800;
+}
+
+.juego-kilimanjaro.kilimanjaro-vista-ascenso .kilimanjaro-portada p {
+  margin: 0;
+  color: #b9c9da;
+  font-size: 17px;
+}
+
+.juego-kilimanjaro.kilimanjaro-vista-ascenso .kilimanjaro-volver-expediciones {
+  flex-shrink: 0;
+  padding: 15px 22px;
+  border: 1px solid #71879d;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.juego-kilimanjaro.kilimanjaro-vista-ascenso .kilimanjaro-volver-expediciones:hover {
+  background: #173653;
+}
+
+@media (max-width: 700px) {
+  .juego-kilimanjaro.kilimanjaro-vista-ascenso .kilimanjaro-portada {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  .juego-kilimanjaro.kilimanjaro-vista-ascenso .kilimanjaro-portada {
+    padding: 20px 16px;
+  }
+}
+

@@ -1,0 +1,872 @@
+
+/* =========================================
+   SUMMIT READY - MONT BLANC
+========================================= */
+
+.juego-montblanc {
+  min-height: 100vh;
+  padding: 36px 22px 70px;
+  background: linear-gradient(180deg, #091b2c, #102b40);
+  color: white;
+}
+
+.juego-montblanc * {
+  box-sizing: border-box;
+}
+
+.juego-montblanc .juego-aconcagua-contenido {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* ENCABEZADO */
+
+.juego-montblanc .montblanc-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 34px;
+  margin-bottom: 26px;
+  background: #081e34;
+}
+
+.juego-montblanc .montblanc-etiqueta {
+  display: block;
+  color: #ff766d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.juego-montblanc .montblanc-encabezado h1 {
+  color: white;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.juego-montblanc .montblanc-encabezado p {
+  color: #b9c9da;
+  margin: 0;
+}
+
+/* BOTONES GENERALES */
+
+.juego-montblanc .montblanc-boton-principal,
+.juego-montblanc .montblanc-boton-secundario {
+  padding: 15px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.juego-montblanc .montblanc-boton-principal {
+  background: #e6392f;
+  border: 1px solid #e6392f;
+  color: white;
+}
+
+.juego-montblanc .montblanc-boton-principal:hover:not(:disabled) {
+  background: #c52d25;
+}
+
+.juego-montblanc .montblanc-boton-principal:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.juego-montblanc .montblanc-boton-secundario {
+  background: transparent;
+  border: 1px solid #71879d;
+  color: white;
+}
+
+.juego-montblanc .montblanc-boton-secundario:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   PREPARACIÓN
+========================================= */
+
+.juego-montblanc .montblanc-preparacion {
+  padding: 26px;
+  background: #102638;
+  border: 1px solid #345064;
+  border-radius: 18px;
+}
+
+.juego-montblanc .montblanc-preparacion-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.juego-montblanc .montblanc-preparacion-cabecera > div:first-child {
+  padding-left: 25px;
+  flex-shrink: 0;
+}
+
+.juego-montblanc .montblanc-preparacion-cabecera h2 {
+  margin: 0;
+  color: white;
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+.juego-montblanc .montblanc-preparacion-cabecera p {
+  margin: 0;
+  color: #c8d3e1;
+  line-height: 1.6;
+}
+
+.juego-montblanc .montblanc-contadores {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+.juego-montblanc .montblanc-contadores strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  margin: 0;
+  padding: 12px 15px;
+  background: #1a354b;
+  border: 1px solid #405a70;
+  border-radius: 10px;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.juego-montblanc .montblanc-contadores .alerta {
+  color: #ff766d;
+  border-color: #e6392f;
+}
+
+.juego-montblanc .montblanc-columnas {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.65fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.juego-montblanc .montblanc-panel-personaje,
+.juego-montblanc .montblanc-panel-equipo {
+  min-width: 0;
+}
+
+.juego-montblanc .montblanc-panel-personaje h3,
+.juego-montblanc .montblanc-panel-equipo h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  color: white;
+}
+
+/* PERSONAJE */
+
+.juego-montblanc .montblanc-personaje-fondo {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background: #173852;
+  background-size: cover;
+  background-position: center;
+}
+
+.juego-montblanc .montblanc-personaje-fondo img {
+  display: block;
+  max-width: 100%;
+  height: 95%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.juego-montblanc .montblanc-personaje-nombre {
+  padding: 12px;
+  background: #0b2032;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 0 0 12px 12px;
+}
+
+.juego-montblanc .montblanc-slots {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.juego-montblanc .montblanc-slot {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px dashed #668198;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 22px;
+}
+
+.juego-montblanc .montblanc-slot img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+/* EQUIPAMIENTO */
+
+.juego-montblanc .montblanc-condiciones {
+  padding: 16px;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+}
+
+.juego-montblanc .montblanc-condiciones strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff766d;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.juego-montblanc .montblanc-condiciones p {
+  margin: 0;
+  color: #c8d3e1;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.juego-montblanc .montblanc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.juego-montblanc .montblanc-tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+  min-height: 155px;
+  padding: 14px 8px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: white;
+  color: #071b30;
+  cursor: pointer;
+}
+
+.juego-montblanc .montblanc-tarjeta:hover:not(:disabled),
+.juego-montblanc .montblanc-tarjeta.seleccionada {
+  border-color: #e6392f;
+}
+
+.juego-montblanc .montblanc-tarjeta.seleccionada {
+  background: #fff5f4;
+}
+
+.juego-montblanc .montblanc-tarjeta img {
+  display: block;
+  width: 100%;
+  height: 105px;
+  object-fit: contain;
+}
+
+.juego-montblanc .montblanc-tarjeta span {
+  color: #071b30;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.juego-montblanc .montblanc-sin-imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 105px;
+}
+
+.juego-montblanc .montblanc-aviso {
+  color: #ff847b;
+  font-weight: 700;
+}
+
+/* BOTONES DENTRO DE LA GRILLA */
+
+.juego-montblanc .montblanc-acciones-preparacion {
+  grid-column: 3 / 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 8px;
+}
+
+.juego-montblanc .montblanc-acciones-preparacion button {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* =========================================
+   ASCENSO
+========================================= */
+
+.juego-montblanc .montblanc-aventura {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.4fr);
+  gap: 28px;
+  align-items: start;
+  margin-top: 30px;
+}
+
+.juego-montblanc .montblanc-escenario,
+.juego-montblanc .montblanc-evento {
+  min-width: 0;
+  padding: 24px;
+  background: #0c2743;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+}
+
+.juego-montblanc .montblanc-escenario-personaje {
+  height: 260px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #173852;
+  background-size: cover;
+  background-position: center;
+}
+
+.juego-montblanc .montblanc-escenario-personaje img {
+  display: block;
+  max-width: 100%;
+  height: 95%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.juego-montblanc .montblanc-escenario h3 {
+  margin: 20px 0 12px;
+  font-size: 17px;
+  color: white;
+}
+
+.juego-montblanc .montblanc-recursos {
+  display: grid;
+  gap: 15px;
+}
+
+.juego-montblanc .montblanc-recurso-texto {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.juego-montblanc .montblanc-barra {
+  width: 100%;
+  height: 11px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #263d55;
+}
+
+.juego-montblanc .montblanc-barra > div {
+  height: 100%;
+  border-radius: inherit;
+  background: #36b978;
+  transition: width 0.35s;
+}
+
+.juego-montblanc .montblanc-barra > div.critico {
+  background: #e6392f;
+}
+
+.juego-montblanc .montblanc-inventario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.juego-montblanc .montblanc-inventario-item {
+  width: 65px;
+  height: 65px;
+  flex: 0 0 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+}
+
+.juego-montblanc .montblanc-inventario-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* CAPÍTULOS */
+
+.juego-montblanc .montblanc-progreso {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #ff8179;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.juego-montblanc .montblanc-pasos {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0 26px;
+}
+
+.juego-montblanc .montblanc-paso {
+  flex: 1;
+  height: 5px;
+  background: #31475c;
+  border-radius: 8px;
+}
+
+.juego-montblanc .montblanc-paso.activo {
+  background: #e6392f;
+}
+
+.juego-montblanc .montblanc-evento h2 {
+  color: white;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  margin: 0 0 16px;
+}
+
+.juego-montblanc .montblanc-descripcion {
+  color: #d2dce7;
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 30px;
+}
+
+.juego-montblanc .montblanc-evento h3 {
+  color: white;
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.juego-montblanc .montblanc-decisiones {
+  display: grid;
+  gap: 14px;
+}
+
+.juego-montblanc .montblanc-decision {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  color: white;
+  background: #143452;
+  border: 1px solid #38536b;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.juego-montblanc .montblanc-decision:hover {
+  border-color: #e6392f;
+  background: #1b3e5e;
+}
+
+.juego-montblanc .montblanc-decision strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.juego-montblanc .montblanc-decision span {
+  display: block;
+  color: #b8c9d9;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.juego-montblanc .montblanc-consecuencia {
+  padding: 22px;
+  background: #102f4c;
+  border: 1px solid #37516b;
+  border-radius: 14px;
+}
+
+.juego-montblanc .montblanc-consecuencia p {
+  color: white;
+  line-height: 1.7;
+}
+
+.juego-montblanc .montblanc-consecuencia button {
+  margin-top: 14px;
+}
+
+/* =========================================
+   RESULTADO FINAL COMPACTO
+========================================= */
+
+.juego-montblanc .montblanc-resultado-final {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 100%;
+  max-width: 950px;
+  margin: 18px auto;
+  padding: 24px 32px;
+
+  background: #102b47;
+  border: 1px solid #29445f;
+  border-radius: 16px;
+
+  text-align: center;
+  color: white;
+}
+
+.juego-montblanc
+.montblanc-resultado-final > .montblanc-etiqueta {
+  margin-bottom: 8px;
+}
+
+.juego-montblanc .montblanc-resultado-simbolo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+  margin: 6px auto 12px;
+
+  border: 2px solid #e6392f;
+  border-radius: 50%;
+  color: white;
+}
+
+.juego-montblanc .montblanc-resultado-final > h2 {
+  margin: 0 0 8px;
+  color: white;
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.2;
+}
+
+.juego-montblanc .montblanc-resultado-intro {
+  max-width: 720px;
+  margin: 0 auto 18px;
+
+  color: #c8d3e1;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ESTADÍSTICAS */
+
+.juego-montblanc
+.montblanc-resultado-final
+.montblanc-estadisticas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin: 8px 0 14px;
+}
+
+.juego-montblanc
+.montblanc-resultado-final
+.montblanc-estadisticas > div {
+  padding: 15px 8px;
+  background: #071c33;
+  border-radius: 12px;
+}
+
+.juego-montblanc
+.montblanc-resultado-final
+.montblanc-estadisticas span {
+  display: block;
+  margin-bottom: 9px;
+  color: #91a3b5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.juego-montblanc
+.montblanc-resultado-final
+.montblanc-estadisticas strong {
+  color: white;
+  font-size: 21px;
+}
+
+/* PERFIL Y MEDALLA */
+
+.juego-montblanc .montblanc-reconocimientos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 12px;
+}
+
+.juego-montblanc .montblanc-perfil,
+.juego-montblanc .montblanc-medalla-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  border: 1px solid #29445f;
+  border-radius: 12px;
+  background: #071c33;
+}
+
+.juego-montblanc .montblanc-perfil > span,
+.juego-montblanc .montblanc-medalla-panel > span {
+  color: #91a3b5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.juego-montblanc .montblanc-perfil h3 {
+  margin: 10px 0;
+  color: white;
+  font-size: 22px;
+}
+
+.juego-montblanc .montblanc-perfil p {
+  margin: 0;
+  color: #cbd5df;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.juego-montblanc .montblanc-medalla-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+  margin: 12px 0;
+
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 26px;
+}
+
+.juego-montblanc .montblanc-medalla-oro {
+  color: #f1c75b;
+}
+
+.juego-montblanc .montblanc-medalla-plata {
+  color: #cbd5df;
+}
+
+.juego-montblanc .montblanc-medalla-bronce {
+  color: #d79b66;
+}
+
+.juego-montblanc .montblanc-sin-medalla {
+  color: #71879d;
+}
+
+.juego-montblanc .montblanc-medalla-panel strong {
+  color: white;
+  font-size: 12px;
+}
+
+/* DESBLOQUEO */
+
+.juego-montblanc .montblanc-desbloqueo {
+  width: 100%;
+  margin-top: 14px;
+  padding: 15px;
+
+  background: #173653;
+  border: 1px solid #29445f;
+  border-radius: 10px;
+}
+
+.juego-montblanc .montblanc-desbloqueo.logrado {
+  background: #153d38;
+  border-color: #347b5c;
+}
+
+.juego-montblanc .montblanc-desbloqueo strong {
+  display: block;
+  margin-bottom: 6px;
+  color: white;
+  font-size: 16px;
+}
+
+.juego-montblanc .montblanc-desbloqueo p {
+  margin: 0;
+  color: #cbd5df;
+  font-size: 12px;
+}
+
+/* BOTONES DEL RESULTADO */
+
+.juego-montblanc .montblanc-acciones-resultado {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+  margin-top: 14px;
+}
+
+.juego-montblanc
+.montblanc-acciones-resultado > .montblanc-boton-principal {
+  width: 100%;
+}
+
+.juego-montblanc .montblanc-acciones-secundarias {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.juego-montblanc .montblanc-acciones-secundarias button {
+  width: 100%;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1050px) {
+  .juego-montblanc .montblanc-preparacion-cabecera {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 1000px) {
+  .juego-montblanc .montblanc-columnas {
+    grid-template-columns: 1fr;
+  }
+
+  .juego-montblanc .montblanc-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .juego-montblanc .montblanc-acciones-preparacion {
+    grid-column: 2 / 4;
+  }
+}
+
+@media (max-width: 850px) {
+  .juego-montblanc .montblanc-aventura {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .juego-montblanc .montblanc-resultado-final {
+    padding: 22px 16px;
+  }
+
+  .juego-montblanc
+  .montblanc-resultado-final
+  .montblanc-estadisticas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .juego-montblanc .montblanc-reconocimientos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .juego-montblanc {
+    padding: 20px 12px 50px;
+  }
+
+  .juego-montblanc .montblanc-encabezado,
+  .juego-montblanc .montblanc-preparacion-cabecera {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .juego-montblanc .montblanc-preparacion,
+  .juego-montblanc .montblanc-escenario,
+  .juego-montblanc .montblanc-evento {
+    padding: 16px;
+  }
+
+  .juego-montblanc .montblanc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .juego-montblanc .montblanc-acciones-preparacion {
+    grid-column: 1 / -1;
+  }
+
+  .juego-montblanc .montblanc-preparacion-cabecera h2 {
+    font-size: clamp(22px, 6vw, 30px);
+  }
+}
+
+@media (max-width: 450px) {
+  .juego-montblanc .montblanc-acciones-secundarias {
+    grid-template-columns: 1fr;
+  }
+
+  .juego-montblanc .montblanc-resultado-final > h2 {
+    font-size: 25px;
+  }
+}
+
+.juego-montblanc .montblanc-contadores {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.juego-montblanc .montblanc-clima {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  white-space: nowrap;
+  color: white;
+}
+
+

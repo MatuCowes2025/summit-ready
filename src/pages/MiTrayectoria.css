@@ -1,0 +1,313 @@
+
+.trayectoria-page {
+  min-height: calc(100vh - 90px);
+  background: #071c33;
+  color: #fff;
+  padding: 54px 32px 80px;
+}
+
+.trayectoria-page .trayectoria-contenido {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  text-align: left;
+}
+
+.trayectoria-etiqueta,
+.trayectoria-nivel {
+  color: #f05b51;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.trayectoria-contenido > h1 {
+  color: #fff;
+  font-size: clamp(36px, 5vw, 58px);
+  margin: 10px 0;
+}
+
+.trayectoria-intro {
+  color: #bacbd9;
+  margin-bottom: 32px;
+}
+
+.trayectoria-estadisticas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.trayectoria-estadisticas > div {
+  padding: 22px;
+  background: #102b47;
+  border: 1px solid #27445f;
+  border-radius: 14px;
+}
+
+.trayectoria-estadisticas span {
+  display: block;
+  font-size: 10px;
+  color: #9eb3c4;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.trayectoria-estadisticas strong {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 32px;
+}
+
+.trayectoria-estadisticas small {
+  font-size: 17px;
+  color: #90a6b9;
+}
+
+.trayectoria-avance {
+  margin: 22px 0 32px;
+  padding: 21px;
+  border-radius: 12px;
+  background: #102b47;
+}
+
+.trayectoria-avance > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.trayectoria-avance span {
+  color: #ff6c63;
+}
+
+.trayectoria-barra {
+  margin-top: 14px;
+  height: 10px;
+  border-radius: 10px;
+  background: #06182a;
+  overflow: hidden;
+}
+
+.trayectoria-barra > div {
+  height: 100%;
+  background: #e6392f;
+  border-radius: inherit;
+  transition: width 0.35s ease;
+}
+
+.trayectoria-montanas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.trayectoria-montana {
+  overflow: hidden;
+  background: #102b47;
+  border: 1px solid #29445f;
+  border-radius: 14px;
+}
+
+.trayectoria-montana.conquistada {
+  border-color: #417c67;
+}
+
+.trayectoria-montana > img {
+  display: block;
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+}
+
+.trayectoria-montana-cuerpo {
+  padding: 19px;
+}
+
+.trayectoria-montana h2 {
+  color: #fff;
+  margin: 9px 0;
+  font-size: 23px;
+}
+
+.trayectoria-estado {
+  font-size: 10px;
+  font-weight: 800;
+  color: #a7b8c9;
+  letter-spacing: 0.7px;
+  min-height: 24px;
+}
+
+.trayectoria-montana.conquistada .trayectoria-estado {
+  color: #77d9ad;
+}
+
+.trayectoria-montana-datos {
+  display: grid;
+  gap: 8px;
+  padding-top: 14px;
+  margin-top: 8px;
+  border-top: 1px solid #29445f;
+}
+
+.trayectoria-montana-datos span {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: #9eb3c4;
+  font-size: 12px;
+}
+
+.trayectoria-montana-datos strong {
+  color: #fff;
+}
+
+.trayectoria-medalla.oro {
+  color: #f3cf6c;
+}
+
+.trayectoria-medalla.plata {
+  color: #cdd7e0;
+}
+
+.trayectoria-medalla.bronce {
+  color: #dc9d70;
+}
+
+.trayectoria-perfil-individual {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #d4e2ef;
+}
+
+.trayectoria-revelacion {
+  margin-top: 30px;
+  padding: 40px 24px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid #3d5770;
+  background: linear-gradient(
+    140deg,
+    #112f4d,
+    #081b30
+  );
+}
+
+.trayectoria-revelacion.completa {
+  border-color: #bd9146;
+  background: linear-gradient(
+    140deg,
+    #153d43,
+    #0b2038 65%,
+    #3c3025
+  );
+}
+
+.trayectoria-revelacion h2 {
+  margin: 15px 0 12px;
+  color: #fff;
+  font-size: clamp(25px, 3vw, 36px);
+}
+
+.trayectoria-revelacion p {
+  max-width: 640px;
+  margin: 0 auto 18px;
+  color: #d3e0ea;
+  line-height: 1.65;
+}
+
+.trayectoria-revelacion > strong {
+  display: block;
+  margin: 18px 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #f0d28b;
+}
+
+.trayectoria-estrella {
+  display: block;
+  margin: 14px 0;
+  font-size: 50px;
+  color: #f1c75b;
+}
+
+.trayectoria-revelacion button {
+  border: 0;
+  border-radius: 8px;
+  background: #e6392f;
+  color: #fff;
+  padding: 15px 28px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.trayectoria-revelacion button:hover {
+  background: #c52d25;
+}
+
+.sr-header nav a.active {
+  color: #ff766d;
+}
+
+.sr-header .header-brand h2 {
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .trayectoria-estadisticas,
+  .trayectoria-montanas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .trayectoria-page {
+    padding: 30px 16px 55px;
+  }
+
+  .trayectoria-estadisticas {
+    gap: 8px;
+  }
+
+  .trayectoria-estadisticas > div {
+    padding: 15px;
+  }
+
+  .trayectoria-estadisticas strong {
+    font-size: 25px;
+  }
+
+  .trayectoria-montanas {
+    grid-template-columns: 1fr;
+  }
+
+  .trayectoria-montana > img {
+    height: 180px;
+  }
+
+  .sr-header {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 18px !important;
+  }
+
+  .sr-header nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+
+.trayectoria-contenido > h1 {
+  line-height: 1.2;
+  margin: 14px 0 18px;
+}
+
+.trayectoria-intro {
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 32px;
+}

@@ -1,0 +1,278 @@
+
+.sr-celebracion-final {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 50px 32px 44px;
+  margin: 30px 0 20px;
+
+  border: 1px solid rgba(246, 207, 121, 0.6);
+  border-radius: 20px;
+
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    #395665 0%,
+    #163345 45%,
+    #071c33 100%
+  );
+
+  color: #fff;
+  text-align: center;
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+  animation: sr-entrada 0.75s ease-out both;
+}
+
+.sr-celebracion-final::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.18;
+
+  background: repeating-linear-gradient(
+    130deg,
+    transparent 0 40px,
+    rgba(255, 255, 255, 0.16) 40px 41px
+  );
+}
+
+.sr-celebracion-destellos {
+  color: #f6d789;
+  font-size: 20px;
+  letter-spacing: 28px;
+  animation: sr-brillo 2.8s ease-in-out infinite alternate;
+}
+
+.sr-celebracion-kicker {
+  display: block;
+  color: #e6eef5;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin: 20px 0 8px;
+}
+
+.sr-celebracion-trofeo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+  margin: 12px auto;
+
+  border: 2px solid #eecf86;
+  border-radius: 50%;
+
+  color: #f7d681;
+  font-size: 70px;
+
+  box-shadow: 0 0 35px rgba(248, 209, 119, 0.24);
+}
+
+.sr-celebracion-sello {
+  display: inline-block;
+  padding: 9px 16px;
+  border-radius: 30px;
+
+  background: rgba(231, 188, 101, 0.13);
+  border: 1px solid rgba(231, 188, 101, 0.5);
+
+  color: #f8d98e;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.sr-celebracion-final h2 {
+  max-width: 780px;
+  margin: 18px auto 12px;
+
+  color: #fff;
+  font-size: clamp(30px, 4.5vw, 54px);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.sr-celebracion-intro {
+  max-width: 670px;
+  margin: 0 auto 28px;
+
+  color: #e2e9f0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.sr-celebracion-ruta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 26px 0;
+}
+
+.sr-celebracion-hito {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  padding: 20px 10px;
+  background: rgba(7, 28, 51, 0.65);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.sr-celebracion-numero {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #9db4c6;
+}
+
+.sr-celebracion-hito strong {
+  font-size: 17px;
+  color: #fff;
+}
+
+.sr-celebracion-check {
+  color: #8ce4b5;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.sr-celebracion-hito small {
+  color: #f3d184;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.sr-celebracion-marca {
+  padding: 22px;
+  margin: 18px auto;
+
+  background: rgba(6, 24, 42, 0.6);
+  border-radius: 12px;
+}
+
+.sr-celebracion-marca span {
+  display: block;
+
+  color: #aabecf;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.sr-celebracion-marca strong {
+  display: block;
+  margin-top: 6px;
+
+  color: #fff;
+  font-size: 45px;
+}
+
+.sr-celebracion-perfil {
+  padding: 26px 20px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(242, 202, 115, 0.45);
+
+  background: linear-gradient(
+    120deg,
+    rgba(112, 83, 42, 0.24),
+    rgba(11, 34, 59, 0.55)
+  );
+}
+
+.sr-celebracion-perfil > span {
+  color: #f5d38a;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.sr-celebracion-perfil h3 {
+  color: #fff;
+  font-size: clamp(25px, 3vw, 36px);
+  margin: 12px 0;
+}
+
+.sr-celebracion-perfil p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #dce7ef;
+  line-height: 1.6;
+}
+
+.sr-celebracion-boton {
+  display: block;
+  width: min(100%, 500px);
+  margin: 25px auto 10px;
+  padding: 17px 22px;
+
+  border: 0;
+  border-radius: 9px;
+
+  background: #e6392f;
+  color: #fff;
+
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.sr-celebracion-boton:hover {
+  background: #c52d25;
+}
+
+.sr-celebracion-rejugar {
+  color: #b3c3d2;
+  font-size: 12px;
+}
+
+@keyframes sr-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes sr-brillo {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .sr-celebracion-final {
+    padding: 35px 15px;
+  }
+
+  .sr-celebracion-ruta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sr-celebracion-destellos {
+    letter-spacing: 12px;
+  }
+
+  .sr-celebracion-marca strong {
+    font-size: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sr-celebracion-final,
+  .sr-celebracion-destellos {
+    animation: none;
+  }
+}
