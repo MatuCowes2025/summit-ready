@@ -8,12 +8,12 @@ import {
 } from '../utils/trayectoria'
 
 import CelebracionFinal from '../components/CelebracionFinal'
-import personaje from '../assets/personaje.png'
+import personaje from '../assets/personaje.webp'
 
 import './AventuraEverest.css'
 
 const imagenes = import.meta.glob(
-  '../assets/*.{png,jpg,jpeg,webp}',
+  '../assets/*.webp',
   {
     eager: true,
     query: '?url',
@@ -40,21 +40,21 @@ const EQUIPAMIENTO = [
     id: 'traje',
     nombre: 'Traje de expedición',
     correcto: true,
-    imagen: buscarImagen('Traje de expedicion.png')
+    imagen: buscarImagen('Traje de expedicion.webp')
   },
   {
     id: 'oxigeno',
     nombre: 'Equipo de oxígeno',
     correcto: true,
-    imagen: buscarImagen('Oxigeno.png')
+    imagen: buscarImagen('Oxigeno.webp')
   },
   {
     id: 'guantes-expedicion',
     nombre: 'Guantes de expedición',
     correcto: true,
     imagen: buscarImagen(
-      'guantes.png',
-      'Guantes.png',
+      'guantes.webp',
+      'Guantes.webp',
       'Guantes de expedicion.png'
     )
   },
@@ -62,40 +62,40 @@ const EQUIPAMIENTO = [
     id: 'crampones',
     nombre: 'Crampones',
     correcto: true,
-    imagen: buscarImagen('Crampones.png')
+    imagen: buscarImagen('Crampones.webp')
   },
   {
     id: 'frontal',
     nombre: 'Linterna frontal',
     correcto: true,
-    imagen: buscarImagen('Linterna frontal.png')
+    imagen: buscarImagen('Linterna frontal.webp')
   },
   {
     id: 'campera',
     nombre: 'Campera de trekking',
     correcto: false,
     imagen: buscarImagen(
-      'Campera de trekking.png',
-      'Campera impermeable.png'
+      'Campera de trekking.webp',
+      'Campera impermeable.webp'
     )
   },
   {
     id: 'botas-trekking',
     nombre: 'Botas de trekking',
     correcto: false,
-    imagen: buscarImagen('botas montaña.png')
+    imagen: buscarImagen('botas montaña.webp')
   },
   {
     id: 'mascarilla',
     nombre: 'Mascarilla deportiva',
     correcto: false,
-    imagen: buscarImagen('Mascarilla.png')
+    imagen: buscarImagen('Mascarilla.webp')
   },
   {
     id: 'linterna-mano',
     nombre: 'Linterna de mano',
     correcto: false,
-    imagen: buscarImagen('Linterna de mano.png')
+    imagen: buscarImagen('Linterna de mano.webp')
   }
 ]
 
@@ -472,8 +472,8 @@ function JuegoEverest({
     todasLasCumbresAnteriores
 
   const fondoEverest = buscarImagen(
-    'everest.png',
-    'Everest.png',
+    'everest.webp',
+    'Everest.webp',
     'monte everest.png'
   )
 

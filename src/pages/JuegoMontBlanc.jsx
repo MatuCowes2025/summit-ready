@@ -7,10 +7,10 @@ import {
   calcularPerfilExpedicion
 } from '../utils/trayectoria'
 
-import personaje from '../assets/personaje.png'
+import personaje from '../assets/personaje.webp'
 import './AventuraMontBlanc.css'
 
-const imagenes = import.meta.glob('../assets/*.{png,jpg,jpeg,webp}', {
+const imagenes = import.meta.glob('../assets/*.webp', {
   eager: true,
   query: '?url',
   import: 'default'
@@ -30,8 +30,8 @@ function buscarImagen(...nombres) {
 }
 
 const fondoMontBlanc = buscarImagen(
-  'mont blanc.png',
-  'Mont Blanc.png',
+  'mont blanc.webp',
+  'Mont Blanc.webp',
   'montblanc.png',
   'MontBlanc.png'
 )
@@ -41,61 +41,61 @@ const EQUIPAMIENTO = [
     id: 'botas',
     nombre: 'Botas de montaña',
     correcto: true,
-    imagen: buscarImagen('botas montaña.png')
+    imagen: buscarImagen('botas montaña.webp')
   },
   {
     id: 'crampones',
     nombre: 'Crampones',
     correcto: true,
-    imagen: buscarImagen('Crampones.png')
+    imagen: buscarImagen('Crampones.webp')
   },
   {
     id: 'guantes',
     nombre: 'Guantes',
     correcto: true,
-    imagen: buscarImagen('guantes.png')
+    imagen: buscarImagen('guantes.webp')
   },
   {
     id: 'impermeable',
     nombre: 'Campera impermeable',
     correcto: true,
-    imagen: buscarImagen('Campera impermeable.png')
+    imagen: buscarImagen('Campera impermeable.webp')
   },
   {
     id: 'termica',
     nombre: 'Campera térmica',
     correcto: true,
-    imagen: buscarImagen('campera termica.png')
+    imagen: buscarImagen('campera termica.webp')
   },
   {
     id: 'frontal',
     nombre: 'Linterna frontal',
     correcto: true,
-    imagen: buscarImagen('Linterna frontal.png')
+    imagen: buscarImagen('Linterna frontal.webp')
   },
   {
     id: 'trail',
     nombre: 'Zapatillas de trail',
     correcto: false,
-    imagen: buscarImagen('Zapatillas de trail.png')
+    imagen: buscarImagen('Zapatillas de trail.webp')
   },
   {
     id: 'trekking',
     nombre: 'Campera de trekking',
     correcto: false,
-    imagen: buscarImagen('Campera de trekking.png')
+    imagen: buscarImagen('Campera de trekking.webp')
   },
   {
     id: 'mascarilla',
     nombre: 'Mascarilla deportiva',
     correcto: false,
-    imagen: buscarImagen('Mascarilla.png')
+    imagen: buscarImagen('Mascarilla.webp')
   },
   {
     id: 'bolso',
     nombre: 'Bolso deportivo',
     correcto: false,
-    imagen: buscarImagen('Bolso deportivo.png')
+    imagen: buscarImagen('Bolso deportivo.webp')
   }
 ]
 

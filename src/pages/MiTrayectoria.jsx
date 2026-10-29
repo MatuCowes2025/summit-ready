@@ -1,10 +1,10 @@
 
 import { useNavigate } from 'react-router-dom'
 
-import aconcagua from '../assets/aconcagua.png'
-import kilimanjaro from '../assets/kilimanjaro.png'
-import montblanc from '../assets/mont blanc.png'
-import everest from '../assets/everest.png'
+import aconcagua from '../assets/aconcagua.webp'
+import kilimanjaro from '../assets/kilimanjaro.webp'
+import montblanc from '../assets/mont blanc.webp'
+import everest from '../assets/everest.webp'
 
 import {
   calcularPerfilGlobal,

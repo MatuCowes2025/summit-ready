@@ -11,16 +11,16 @@ import {
   calcularPerfilExpedicion
 } from '../utils/trayectoria'
 
-import personaje from '../assets/personaje.png'
-import campera from '../assets/campera termica.png'
-import mochila from '../assets/mochila.png'
-import guantes from '../assets/guantes.png'
-import botas from '../assets/botas montaña.png'
-import remera from '../assets/remera.png'
-import paraguas from '../assets/paraguas.png'
-import gorra from '../assets/gorra.png'
-import zapatillas from '../assets/zapatillas.png'
-import fondoAconcagua from '../assets/fondo aconcagua.png'
+import personaje from '../assets/personaje.webp'
+import campera from '../assets/campera termica.webp'
+import mochila from '../assets/mochila.webp'
+import guantes from '../assets/guantes.webp'
+import botas from '../assets/botas montaña.webp'
+import remera from '../assets/remera.webp'
+import paraguas from '../assets/paraguas.webp'
+import gorra from '../assets/gorra.webp'
+import zapatillas from '../assets/zapatillas.webp'
+import fondoAconcagua from '../assets/fondo aconcagua.webp'
 
 const equipamiento = [
   {

@@ -1,10 +1,10 @@
 
 import ExpeditionCard from '../components/ExpeditionCard'
 
-import aconcagua from '../assets/aconcagua.png'
-import kilimanjaro from '../assets/kilimanjaro.png'
-import everest from '../assets/everest.png'
-import montBlanc from '../assets/mont blanc.png'
+import aconcagua from '../assets/aconcagua.webp'
+import kilimanjaro from '../assets/kilimanjaro.webp'
+import everest from '../assets/everest.webp'
+import montBlanc from '../assets/mont blanc.webp'
 
 import './ProgresoExpediciones.css'
 
