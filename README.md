@@ -1,16 +1,66 @@
-# React + Vite
+# Summit Ready – The North Face
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Summit Ready es un advergame interactivo desarrollado como proyecto universitario para la materia Contenido y Creatividad III.
 
-Currently, two official plugins are available:
+La propuesta consiste en un videojuego de expediciones de montaña inspirado en el universo de **The North Face**, donde el jugador debe seleccionar el equipamiento adecuado para enfrentar diferentes condiciones climáticas y alcanzar la cumbre.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+¿Cómo funciona el juego?:
 
-## React Compiler
+El jugador comienza ingresando su nombre y puede acceder a las expediciones disponibles.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Cada montaña presenta un desafío con condiciones climáticas, niveles de dificultad y un tiempo límite para seleccionar el equipamiento.
 
-## Expanding the ESLint configuration
+El objetivo es tomar las mejores decisiones, conseguir puntos, alcanzar la cumbre y desbloquear nuevas expediciones.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Expediciones:
+
+El videojuego cuenta con cuatro montañas:
+
+1. **Aconcagua:** dificultad fácil.
+2. **Kilimanjaro:** dificultad media.
+3. **Mont Blanc:** dificultad media.
+4. **Everest:** dificultad difícil.
+
+Las expediciones se desbloquean progresivamente según los puntos obtenidos.
+
+Características principales:
+
+- Cuatro expediciones con diferentes desafíos.
+- Selección interactiva de equipamiento.
+- Temporizador para tomar decisiones.
+- Sistema de puntuación y resultados.
+- Desbloqueo progresivo de montañas.
+- Registro de mejores puntuaciones y cumbres conquistadas.
+- Sección «Mi trayectoria» para consultar el progreso.
+- Persistencia del progreso en el navegador mediante `localStorage`.
+- Diseño visual adaptado a la identidad de The North Face.
+
+Tecnologías utilizadas:
+
+- React: desarrollo de componentes e interfaces.
+- JavaScript: lógica y funcionamiento del juego.
+- Vite: entorno de desarrollo y compilación.
+- React Router: navegación entre pantallas.
+- CSS: estilos, diseño y adaptación visual.
+- Git y GitHub: control de versiones y repositorio.
+- Vercel: publicación del videojuego.
+
+
+Uso de inteligencia artificial:
+
+Durante el desarrollo se us herramientas de inteligencia artificial como apoyo para la planificación, implementación y revisión del videojuego.
+
+Su utilización incluyó asistencia en la escritura y corrección de código, resolución de errores, ajustes de interfaz y optimización de recursos gráficos.
+
+Las propuestas se revisaron y probaron durante el proceso de desarrollo para adaptarlas a los objetivos del proyecto.
+
+Enlaces:
+
+Jugar online: [https://summit-ready-mu.vercel.app/](https://summit-ready-mu.vercel.app/)
+
+Repositorio GitHub: [https://github.com/MatuCowes2025/summit-ready](https://github.com/MatuCowes2025/summit-ready)
+
+Contexto académico:
+
+Proyecto realizado para la materia Contenido y Creatividad III, para de la carrera de Comunicación Digital.
+
