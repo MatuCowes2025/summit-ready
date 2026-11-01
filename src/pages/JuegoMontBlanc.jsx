@@ -557,7 +557,7 @@ function JuegoMontBlanc({
             <h1>MONT BLANC</h1>
 
             <p>
-              4.808 m · Nieve y hielo · Dificultad alta
+             4.808 m · Nieve y hielo · Dificultad media
             </p>
           </div>
 

@@ -441,10 +441,11 @@ function JuegoAconcagua({
   }
 
   const confirmarEquipo = () => {
-    if (seleccionados.length === 4) {
-      setConfirmado(true)
-    }
+  if (seleccionados.length === 4) {
+    setConfirmado(true)
+    comenzarAscenso()
   }
+}
 
   const reiniciarSeleccion = () => {
     setSeleccionados([])
@@ -737,8 +738,10 @@ function JuegoAconcagua({
 
                   <div className="aventura-impacto">
                     <span>
-                      ENERGÍA {impacto.energia}%
-                    </span>
+                   {impacto.energia === 0
+                    ? 'ENERGÍA SIN CAMBIOS'
+                   : `ENERGÍA ${impacto.energia > 0 ? '+' : ''}${impacto.energia}%`}
+                  </span>
 
                     <span>
                       +{impacto.puntos} PUNTOS
@@ -862,8 +865,8 @@ function JuegoAconcagua({
             >
               <strong>
                 {puedeContinuar
-                  ? '¡Kilimanjaro desbloqueado!'
-                  : 'Próximo desafío: Kilimanjaro'}
+                 ? 'Kilimanjaro disponible'
+                 : 'Próximo desafío: Kilimanjaro'}
               </strong>
 
               <p>
@@ -1076,7 +1079,7 @@ function JuegoAconcagua({
                       disabled={seleccionados.length !== 4 || tiempoAgotado}
                       onClick={confirmarEquipo}
                     >
-                      CONFIRMAR EQUIPO
+                      COMENZAR ASCENSO
                     </button>
                   ) : (
                     <button

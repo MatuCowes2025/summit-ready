@@ -1067,10 +1067,6 @@ function JuegoEverest({
                 <strong>
                   {seleccionados.length}/{MAX_SELECCION} OBJETOS
                 </strong>
-
-                <strong className={tiempo <= 5 ? 'alerta' : ''}>
-                  {tiempo} SEG
-                </strong>
               </div>
             </div>
 
